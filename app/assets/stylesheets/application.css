@@ -14,5 +14,31 @@
  *= require_self
  */
 
+*{
+    box-sizing: border-box;
+}
 
-helloworld
+.navbar {
+	background-color: #d6a3e8;
+	width: 500px;
+	text-align: center;
+	position: absolute;
+	text-decoration: none;
+}
+
+.nav-item {
+	width: 100px;
+}
+
+.seperate-line {
+	width: 500px;
+	height: 1.5px;
+	color: #3d2a46;
+}
+
+.title {
+	text-align: center;
+	background-color: #ffffff;
+	width: 200px;
+	height: 50px;
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+		<%= form_for Review.new, url: '/review/record', multipart: true do |x| %>
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        제목 <%= x.text_field :title %><br><br>
+    	내용 <%= x.text_area :content%><br><br>
+    	사진 첨부 <%= x.file_field :image %><br>
+    	<%= x.submit '작성' %>
+    	<% end %>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<%= form_for Cafe.find(params[:cafe_id]), url: '/cafe/update/<%=@cafe.id%>', multipart: true do |x| %>
+			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+			    카페이름 <input type = 'text' name = 'cafe_title' value='<%=@x.title%>'><br><br>
+		    	영업시간 <textarea name = 'cafe_time'><%=@x.time%></textarea><br><br>
+		    	사진 첨부 <%= x.file_field :image %><br>
+		    	<%= x.submit '수정' %>
+		<% end %>
+	</body>
+</html>

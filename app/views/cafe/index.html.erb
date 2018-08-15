@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title></title>
+        </head>
+        <body>
+            <% @cafes.each do |x| %>
+                <br><strong><%=x.title%></strong><br>
+                <%= image_tag x.img_url.thumb %><br>
+                <br><br><%=x.time%><br><br><br>
+        
+                
+                <a href="/cafe/destroy/<%=x.id%>">삭제</a><br>
+                
+                <a href="/cafe/edit/<%=x.id%>">수정</a><br>
+                ────────────────────────────────────────────────<br><br>
+            <% end %>
+        
+            <a href = "/cafe/new">새로운 리뷰 쓰기</a>
+        </body>
+    </html>
