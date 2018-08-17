@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-	<body>
-		<%= form_for @review , url: '/review/update/#{@review.id}', method: "post", multipart: true do |x| %>
-			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-			    제목 <input type = 'text' name = 'review_title' value='<%=x.title%>'><br><br>
-		    	내용 <textarea name = 'review_content'><%=x.content%></textarea><br><br>
-		    	사진 첨부 <%= x.file_field :image %><br>
-		    	<%= x.submit '수정' %>
-		<% end %>
-	</body>
+   <body>
+      <%= form_for @review , url: "/review/update/#{@review.id}", method: "patch", multipart: true do |x| %>
+         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    	제목 <%= x.text_field :title %><br><br>
+    	내용 <%= x.text_area :content%><br><br>
+    	사진 첨부 <%= x.file_field :image %><br>
+           <%= x.submit '수정' %>
+      <% end %>
+   </body>
 </html>
 
 

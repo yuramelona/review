@@ -4,10 +4,11 @@
             <title></title>
         </head>
         <body>
-            <% @cafes.each do |x| %>
-                <br><strong><%=x.title%></strong><br>
-                <%= image_tag x.img_url.thumb %><br>
-                <br><br><%=x.time%><br><br><br>
+            <% @caves.each do |x| %>
+                <br><strong><%=x.cafename%></strong><br><br>
+                <%= image_tag x.img_url.thumb %><br><br>
+                <%=x.time%><br><br>
+                <%=x.recommend%><br><br>    
         
                 
                 <a href="/cafe/destroy/<%=x.id%>">삭제</a><br>
@@ -16,6 +17,6 @@
                 ────────────────────────────────────────────────<br><br>
             <% end %>
         
-            <a href = "/cafe/new">새로운 리뷰 쓰기</a>
+            <a href = "/cafe/new">새로운 카페 추천</a>
         </body>
     </html>

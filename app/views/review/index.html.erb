@@ -6,8 +6,8 @@
         <body>
             <% @reviews.each do |x| %>
                 <br><strong><%=x.title%></strong><br>
-                <%= image_tag x.img_url.thumb %><br>
-                <br><br><%=x.content%><br><br><br>
+                <%= image_tag x.img_url.thumb %><br><br>
+                <%=x.content%><br><br>
         
                 
                 <a href="/review/destroy/<%=x.id%>">삭제</a><br>

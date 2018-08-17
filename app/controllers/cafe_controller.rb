@@ -5,16 +5,17 @@ class CafeController < ApplicationController
 
   def record
     @cafe = Cafe.new
-    @cafe.title = params[:cafe][:title]
-    @cafe.content = params[:cafe][:time]
-    @cafe.img_url = params[:cafe][:image]
+    @cafe.cafename = params[:cafe][:cafename]
+    @cafe.time = params[:cafe][:time]
+    @cafe.recommend = params[:cafe][:recommend]
+    @cafe.cafeimg = params[:cafe][:cafeimg]
     @cafe.save
     
     redirect_to '/cafe/index'
   end
 
   def index
-    @cafes = Cafe.all
+    @caves = Cafe.all
   end
 
   def destroy
@@ -30,9 +31,10 @@ class CafeController < ApplicationController
 
   def update
     cafe = Cafe.find(params[:cafe_id])
-    cafe.title = params[:cafe][:title]
-    cafe.content = params[:cafe][:time]
-    cafe.img_url = params[:cafe][:image]
+    cafe.cafename = params[:cafe][:cafename]
+    cafe.time = params[:cafe][:time]
+    cafe.recommend = params[:cafe][:recommend]
+    cafe.cafeimg = params[:cafe][:cafeimg]
     cafe.save
     
     redirect_to '/cafe/index'
