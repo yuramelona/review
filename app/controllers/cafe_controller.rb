@@ -8,7 +8,7 @@ class CafeController < ApplicationController
     @cafe.cafename = params[:cafe][:cafename]
     @cafe.time = params[:cafe][:time]
     @cafe.recommend = params[:cafe][:recommend]
-    @cafe.cafeimg = params[:cafe][:cafeimg]
+    @cafe.img_url = params[:cafe][:img_url]
     @cafe.save
     
     redirect_to '/cafe/index'
@@ -34,7 +34,7 @@ class CafeController < ApplicationController
     cafe.cafename = params[:cafe][:cafename]
     cafe.time = params[:cafe][:time]
     cafe.recommend = params[:cafe][:recommend]
-    cafe.cafeimg = params[:cafe][:cafeimg]
+    cafe.img_url = params[:cafe][:img_url]
     cafe.save
     
     redirect_to '/cafe/index'
