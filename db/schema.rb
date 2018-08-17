@@ -10,11 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180815032610) do
+ActiveRecord::Schema.define(version: 20180817161000) do
 
   create_table "caves", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cafename"
+    t.string "time"
+    t.string "recommend"
+    t.string "img_url"
   end
 
   create_table "posts", force: :cascade do |t|
